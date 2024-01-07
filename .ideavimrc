@@ -1,0 +1,63 @@
+let mapleader = " "
+nmap <space> <Leader>
+
+set scrolloff=18
+set incsearch
+set nrformats-=octal
+set hlsearch
+map Q gq
+""""""""""""""""""""""" Plugins """""""""""""""""""""""""""""""""
+Plug 'machakann/vim-highlightedyank'
+plug 'tpope/vim-commentary'
+""""""""""""""""""""""" Normal mode """""""""""""""""""""""""""""""""
+nmap no o<ESC>
+nmap nO O<ESC><CR>
+nmap <space>a ggVG
+nmap <C-H> <C-W>h
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-L> <C-W>l
+""""""""""""""""""""""" Insert mode """""""""""""""""""""""""""""""""
+imap jk <ESC>
+imap kj <ESC>
+" imap <space>p <ESC>p<CR>
+""""""""""""""""""""""" Insert mode """""""""""""""""""""""""""""""""
+map <space>w [w
+map <space>b [b
+map <space>e ]w
+map <space>ge ]b
+""""""""""""""""""""""" Actions """""""""""""""""""""""""""""""""
+map <space>r <Action>(ReformatCode)
+map <space>d <Action>(Debug)
+map <space>b <Action>(ToggleLineBreakpoint)
+map <space>l <Action>(SplitRight)
+
+nnoremap gj :action MethodDown <CR>
+nnoremap gk :action MethodUp <CR>
+nmap gb <Action>(Back)
+nmap gf <Action>(Forward)
+
+
+
+" Cursor always stays at the center of the screen when going down and up
+" :nnoremap k kzz
+" nnoremap j jzz
+" :nnoremap <C-u> <C-u>zz
+" nnoremap <C-d> <C-d>zz
+
+" Harpoon settings
+" nmap <leader><C-1> :action SetHarpoon1<cr>
+" nmap <leader><C-2> :action SetHarpoon2<cr>
+" nmap <leader><C-3> :action SetHarpoon3<cr>
+" nmap <leader><C-4> :action SetHarpoon4<cr>
+
+" nmap <C-1> :action GotoHarpoon1<cr>
+" nmap <C-2> :action GotoHarpoon2<cr>
+" nmap <C-3> :action GotoHarpoon3<cr>
+" nmap <C-4> :action GotoHarpoon4<cr>
+"
+" nmap <C-e> :action ShowHarpoon<cr>
+" nmap <C-s> :action AddToHarpoon<cr>
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
