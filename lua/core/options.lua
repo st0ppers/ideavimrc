@@ -13,6 +13,8 @@ opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,term
 -- Line Numbers
 opt.relativenumber = true
 opt.number = true
+
+
 -- Don't know
 opt.swapfile = false
 opt.backup = false
@@ -28,6 +30,7 @@ opt.signcolumn = "yes"
 opt.isfname:append("@-@")
 
 -- Tabs & Indentation
+opt.scrolloff = 12
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true

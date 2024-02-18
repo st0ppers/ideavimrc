@@ -9,6 +9,7 @@ vim.api.nvim_exec([[
   autocmd BufWritePre <buffer> lua vim.lsp.buf.format_sync()
 ]], false)
 
+
 -- Own keymaps
 keymap.set("n", "no", "o<ESC>")
 keymap.set("n", "nO", "O<ESC><CR>")
@@ -16,32 +17,41 @@ keymap.set("n", "<C-H>", "<C-W>h")
 keymap.set("n", "<C-J>", "<C-W>j")
 keymap.set("n", "<C-K>", "<C-W>k")
 keymap.set("n", "<C-L>", "<C-W>l")
+keymap.set("n", "<leader>te", ":split<Return> :terminal<CR>a") -- open terminal
+
 -- Escape insert mode
 keymap.set("i", "jk", "<ESC>")
 keymap.set("i", "kj", "<ESC>")
+
 -- Move capital word
 keymap.set("n", "<space>w", "[w")
 keymap.set("n", "<space>b", "[b")
 keymap.set("n", "<space>e", "]w")
 keymap.set("n", "<space>ge", "]b")
--- Dont remember
-keymap.set("v", "J", ":m '>+2<CR>gv=gv")
-keymap.set("v", "K", ":m '<-1<CR>gv=gv")
+
+-- Alt move
+keymap.set("v", "K", ":m -2<CR>gv")
+keymap.set("v", "J", ":m '>+<CR>gv")
 
 keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 keymap.set("n", "<leader>Y", [["+Y]])
+
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
+
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
+
 -- New tab
 keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
+
 -- Move window
 keymap.set("n", "sh", "<C-w>h")
 keymap.set("n", "sk", "<C-w>k")
@@ -70,13 +80,14 @@ keymap.set("n", "<leader>qp", ":cprev<CR>") -- jump to prev quickfix list item
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle maximize tab
 
 -- Nvim-tree
-keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>")   -- toggle file explorer
+keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 keymap.set("n", "<leader>er", ":NvimTreeFocus<CR>")    -- toggle focus to file explorer
 keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>") -- find file in file explorer
 
 -- Telescope
-keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
-keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
+-- keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
+keymap.set('n', '<C-f>', require('telescope.builtin').live_grep, {})
+keymap.set('n', '<leader>fg', require('telescope.builtin').find_files, {})
 keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {})
 keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
 keymap.set('n', '<leader>fs', require('telescope.builtin').current_buffer_fuzzy_find, {})
@@ -104,7 +115,7 @@ keymap.set("n", "<leader>ho", function() require("harpoon.ui").nav_file(9) end)
 keymap.set("n", "<leader>xr", ":call VrcQuery()<CR>") -- Run REST query
 
 -- LSP
-keymap.set('n', '<leader>gg', '<cmd>lua vim.lsp.buf.hover()<CR>')
+keymap.set('n', '<leader>gg', '<cmd>lua vim.lsp.buf.hover()<CR>') -- Show info
 keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 keymap.set('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
 keymap.set('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')

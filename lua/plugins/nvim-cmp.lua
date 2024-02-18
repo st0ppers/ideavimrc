@@ -42,8 +42,8 @@ return {
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
         ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
         ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- scroll backward
-        ["<C-f>"] = cmp.mapping.scroll_docs(4), -- scroll forward
-        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+        --["<C-f>"] = cmp.mapping.scroll_docs(4), -- scroll forward ( removed because I want to serach with Ctrl + f):w
+        --["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(), -- clear completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
       }),

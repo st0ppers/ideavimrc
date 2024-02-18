@@ -1,4 +1,5 @@
 -- Bootstrap lazy
+-- vim.o.shell = vim.fn.executable('pwsh') and 'pwsh' or 'powershell'
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -25,5 +26,6 @@ require("lazy").setup("plugins", {
 })
 
 -- These modules are not loaded by lazy
+--require("github/copilot.vim")
 require("core.options")
 require("core.keymaps")
