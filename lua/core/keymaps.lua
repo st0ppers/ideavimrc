@@ -158,3 +158,12 @@ keymap.set("n", '<leader>d?',
 keymap.set("n", '<leader>df', '<cmd>Telescope dap frames<cr>')
 keymap.set("n", '<leader>dh', '<cmd>Telescope dap commands<cr>')
 keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({ default_text = ":E:" }) end)
+
+-- Tab movement
+keymap.set("n", "<Tab>", "V>")
+keymap.set("n", "<S-Tab>", "V<")
+
+-- C#
+--add fix usages and add format code with omnisharp
+keymap.set("n", "<leader>fu", ":OmniSharpFixUsings<CR>")
+keymap.set("n", "<leader>fc", ":OmniSharpCodeFormat<CR>")
