@@ -33,5 +33,6 @@ require("lazy").setup("plugins", {
 
 require("core.options")
 require("core.keymaps")
-vim.cmd("colorscheme gruvbox")
+
+--vim.cmd("colorscheme gruvbox")
 --vim.g.gruvbox_contrast_dark = 'hard'

@@ -20,8 +20,21 @@
 -- vim.cmd("colorscheme onedark_dark")-- Add to your init.lua
 -- }
 
-
 return {
-  "morhetz/gruvbox",
-  priority = 1000,
+    'jesseleite/nvim-noirbuddy',
+    dependencies = {
+        { 'tjdevries/colorbuddy.nvim' }
+    },
+    lazy = false,
+    priority = 1000,
+    opts = {
+        -- All of your `setup(opts)` will go here
+    },
 }
+
+
+
+-- return {
+--   "morhetz/gruvbox",
+--   priority = 1000,
+-- }
