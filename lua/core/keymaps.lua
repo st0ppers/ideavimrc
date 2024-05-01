@@ -44,9 +44,10 @@ keymap.set("n", "-", "<C-x>")
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- New tab
-keymap.set("n", "te", ":tabedit")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+--keymap.set("n", "te", ":tabedit ")
+keymap.set("n", "te", "<C-w>T")
+keymap.set("n", "<tab>", ":tabnext<CR>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<CR>", opts)
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -160,8 +161,8 @@ keymap.set("n", '<leader>dh', '<cmd>Telescope dap commands<cr>')
 keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({ default_text = ":E:" }) end)
 
 -- Tab movement
-keymap.set("n", "<Tab>", "V>")
-keymap.set("n", "<S-Tab>", "V<")
+-- keymap.set("n", "<Tab>", "V>")
+-- keymap.set("n", "<S-Tab>", "V<")
 
 -- C#
 --add fix usages and add format code with omnisharp

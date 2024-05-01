@@ -1,5 +1,7 @@
 -- vim.o.shell = vim.fn.executable('pwsh') and 'pwsh' or 'powershell'
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.opt.ignorecase = true
+
 vim.g.mapleader = " "
 
 -- Highlight when yanking (copying) text
