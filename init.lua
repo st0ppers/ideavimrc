@@ -1,6 +1,6 @@
 -- vim.o.shell = vim.fn.executable('pwsh') and 'pwsh' or 'powershell'
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-vim.opt.ignorecase = true
+vim.opt.ignorecase = true 
 
 vim.g.mapleader = " "
 
@@ -35,6 +35,8 @@ require("lazy").setup("plugins", {
 
 require("core.options")
 require("core.keymaps")
-
---vim.cmd("colorscheme gruvbox")
---vim.g.gruvbox_contrast_dark = 'hard'
+require("core.dap")
+require("core.harpoon")
+require("core.lsp")
+require("core.nerdtree")
+require("core.telescope")
