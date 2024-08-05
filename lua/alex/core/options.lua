@@ -18,6 +18,7 @@ opt.background = "dark"
 opt.signcolumn = "yes"
 
 opt.backspace = "indent,eol,start"
+opt.mouse = ""
 
 opt.clipboard:append("unnamedplus")
 

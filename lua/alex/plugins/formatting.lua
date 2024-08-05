@@ -21,6 +21,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				csharp = { "csharpier" },
+				cs = { "csharpier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

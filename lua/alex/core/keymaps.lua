@@ -41,3 +41,16 @@ keymap.set("n", "ss", ":split<Return>", { desc = "Split window to the bottom", n
 keymap.set("n", "sv", ":vsplit<Return>", { desc = "Split window to the right", noremap = true, silent = true })
 keymap.set("n", "se", "<C-w>=", { desc = "Make splits equa size", noremap = true, silent = true })
 keymap.set("n", "<C-W>", "<cmd>close<CR>", { desc = "Close current split", noremap = true, silent = true })
+keymap.set(
+	"n",
+	"<leader>p",
+	":vertical resize +5<CR>",
+	{ desc = "Increase split width", noremap = true, silent = true }
+)
+
+keymap.set(
+	"n",
+	"<leader>m",
+	":vertical resize -5<CR>",
+	{ desc = "Decrease split width", noremap = true, silent = true }
+)
