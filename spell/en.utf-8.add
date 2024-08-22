@@ -1,1 +1,10 @@
 DungeonsAndDragons
+AddSerilog
+PlayerId
+GroupId
+api
+ConnectionStrings
+JwtOptions
+groupId
+freeTime
+TODO
