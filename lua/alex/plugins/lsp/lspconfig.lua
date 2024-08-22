@@ -8,9 +8,9 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
-
 		local mason_lspconfig = require("mason-lspconfig")
+
+		local lspconfig = require("lspconfig")
 
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
