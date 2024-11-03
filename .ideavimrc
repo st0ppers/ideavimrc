@@ -1,0 +1,159 @@
+let mapleader = " "
+set idearefactormode=keep
+set ignorecase
+set clipboard=unnamedplus
+nmap <space> <Leader>
+
+set scrolloff=12
+set incsearch
+set nrformats-=octal
+set hlsearch
+set incsearch
+map Q gq
+""""""""""""""""""""""" Plugins """""""""""""""""""""""""""""""""""""""
+Plug 'machakann/vim-highlightedyank'
+Plug 'tjdevries/colorbuddy.nvim'
+plug 'tpope/vim-commentary'
+Plug 'nvim-lua/plenary.nvim'
+
+""""""""""""""""""""""" Normal mode """""""""""""""""""""""""""""""""""
+nmap no o<ESC>
+nmap nO O<ESC><CR>
+nmap <space>a ggVG
+map <space>v "+p"
+nmap <space>' bi"<ESC>ea"<ESC>
+nmap <space>q f"xf"x
+" Split window
+nmap ss :split<Return>
+nmap sv :vsplit<Return>
+"" Increment/Decrement
+nmap + <C-a>
+nmap - <C-x>
+nmap <ESC> :nohlsearch<CR>
+nmap <space>l <C-6>
+""""""""""""""""""""""" Move between split """"""""""""""""""""""""""""
+nmap <C-H> <C-W>h
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-L> <C-W>l
+""""""""""""""""""""""""" Visual mode """""""""""""""""""""""""""""""""
+"" Alt move
+vmap K :m -2<CR>gv
+vmap J :m '>+<CR>gv
+vmap <TAB> >gv
+vmap <S-TAB> <gv
+""""""""""""""""""""""" mode """"""""""""""""""""""""""""""""""""""""""
+map <space>w [w
+map <space>b [b
+map <space>e ]w
+map <space>ge ]b
+
+map <space>m Va{ok
+""""""""""""""""""""""" Actions """"""""""""""""""""""""""""""""""""""
+map <space>r <Action>(ReformatCode)
+"map <space>d <Action>(Debug)
+map <space>s <Action>(Stop)
+map <space>t <Action>(ToggleLineBreakpoint)
+map <space>u <Action>(FindUsages)
+nmap <space>f <Action>(NewFile)
+nmap <space>p <Action>(ParameterInfo)
+nmap <space>q <Action>(QuickJavaDoc)
+nnoremap mj :action MethodDown <CR>
+nnoremap mk :action MethodUp <CR>
+nmap gb <Action>(Back)
+nmap gf <Action>(Forward)
+nmap <space>ff <Action>(SearchEverywhere)
+nmap <space>rr <Action>(ReplaceInPath)
+nmap <space>sd <Action>(GotoNextError)
+nmap <space>[d <Action>(GotoNextError)
+nmap <C-b> <Action>(GotoDeclaration)
+nmap <space>x <Action>(HideActiveWindow)
+nmap <space>of <Action>(SelectInProjectView)
+nmap <space>g <Action>(Git.Branches)
+nmap <space>ca <Action>(Refactorings.QuickListPopupAction)
+  
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <S-TAB> :action NextTab<CR>
+
+
+"" nmap <space>i <Action>(ReSharperGotoImplementation)
+nmap <space>i <Action>(GotoImplementation)
+""""""""""""""""""""""" Nerdtree """"""""""""""""""""""""""""""""""""""
+Plug 'preservim/nerdtree'
+map <c-n> :NERDTreeToggle<CR>
+
+let g:NERDTreeMapActivateNode = 'l'
+let g:NERDTreeMapJumpParent = 'h'
+""""""""""""""""""""""" Surround """"""""""""""""""""""""""""""""""""""
+Plug 'tpope/vim-surround'
+""""""""""""""""""""""" Harpoon """"""""""""""""""""""""""""""""""""""
+nmap <leader>ha <Action>(AddToHarpoon)
+nmap <leader>hh <Action>(ShowHarpoon)
+nmap <leader>hq <Action>(GotoHarpoon1)
+nmap <leader>hw <Action>(GotoHarpoon2)
+nmap <leader>he <Action>(GotoHarpoon3)
+nmap <leader>hr <Action>(GotoHarpoon4)
+""""""""""""""""""""""" colorscheme """"""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+" Cursor always stays at the center of the screen when going down and up
+" :nnoremap k kzz
+" nnoremap j jzz
+" :nnoremap <C-u> <C-u>zz
+" nnoremap <C-d> <C-d>zz
+
+" Harpoon settings
+" nmap <leader><C-1> :action SetHarpoon1<cr>
+" nmap <leader><C-2> :action SetHarpoon2<cr>
+" nmap <leader><C-3> :action SetHarpoon3<cr>
+" nmap <leader><C-4> :action SetHarpoon4<cr>
+
+" nmap <C-1> :action GotoHarpoon1<cr>
+" nmap <C-2> :action GotoHarpoon2<cr>
+" nmap <C-3> :action GotoHarpoon3<cr>
+" nmap <C-4> :action GotoHarpoon4<cr>
+"
+" nmap <C-e> :action ShowHarpoon<cr>
+" nmap <C-s> :action AddToHarpoon<cr>
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
