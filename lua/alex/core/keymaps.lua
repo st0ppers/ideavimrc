@@ -29,6 +29,12 @@ keymap.set("n", "<leader>ge", "]b", { desc = "?" })
 keymap.set("v", "K", ":m -2<CR>gv", { desc = "Alt move the selection up" })
 keymap.set("v", "J", ":m '>+<CR>gv", { desc = "Alt move the selection down" })
 
+--Indentation
+keymap.set("v", "<", "<gv", { desc = "Indent left" })
+keymap.set("v", ">", ">gv", { desc = "Indent right" })
+keymap.set("n", "<", "<<", { desc = "Indent left" })
+keymap.set("n", ">", ">>", { desc = "Indent right" })
+
 -- New tab
 keymap.set("n", "to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
