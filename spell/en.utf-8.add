@@ -8,3 +8,7 @@ JwtOptions
 groupId
 freeTime
 TODO
+structs
+struct
+init
+println
