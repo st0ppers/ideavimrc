@@ -11,11 +11,12 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 opt.mouse = ""
 opt.clipboard:append("unnamedplus")
+opt.hlsearch = false
+opt.incsearch = true
+
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
-opt.hlsearch = false
-opt.incsearch = true
 
 -- Tabs & Indentation
 opt.scrolloff = 12
@@ -31,7 +32,6 @@ opt.spelllang = "en_us"
 opt.ignorecase = true
 opt.smartcase = true
 
--- Folding
-opt.foldlevel = 20
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
+-- -- Folding
+opt.foldmethod = "syntax"
+opt.tw = 200
