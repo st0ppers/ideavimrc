@@ -14,10 +14,9 @@ return {
                     "clangd",
                     "csharp_ls",
                     "marksman",
-                    -- Cannot install npm on linux :(
-                    --"tsp-server",
-                    --"html",
-                    --"cssls",
+                    "ts_ls",
+                    "html",
+                    "cssls",
                 }
             })
         end
@@ -42,6 +41,9 @@ return {
             local capabilites = require('blink.cmp').get_lsp_capabilities()
             local common_object = { capabilites = capabilites };
 
+            lspconfig.html.setup(common_object)
+            lspconfig.cssls.setup(common_object)
+            lspconfig.ts_ls.setup(common_object)
             lspconfig.lua_ls.setup(common_object)
             lspconfig.clangd.setup(common_object)
             lspconfig.csharp_ls.setup(

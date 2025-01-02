@@ -6,7 +6,7 @@ keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Source curre
 keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Source current file" })
 keymap.set("v", "<leader>x", ":lua<CR>", { desc = "Source selection" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
+keymap.set("n", "<leader>a", "gg<S-v>G", { desc = "Select All" })
 keymap.set("n", "gx", ":!open <c-r><c-a><CR>", { desc = "Open url under cursor" })
 
 -- Move window
@@ -41,8 +41,8 @@ keymap.set("n", "<", "<<", { desc = "Indent left" })
 keymap.set("n", ">", ">>", { desc = "Indent right" })
 
 --Quickfix
-keymap.set("n", "<a-j>", "<cmd>cnext<CR>", { desc = "Go to next quickfix item" })
-keymap.set("n", "<a-k>", "<cmd>cprev<CR>", { desc = "Go to next quickfix item" })
+keymap.set("n", "<A-j>", "<cmd>cnext<CR>", { desc = "Go to next quickfix item" })
+keymap.set("n", "<A-k>", "<cmd>cprev<CR>", { desc = "Go to prev quickfix item" })
 
 -- Resizing
 keymap.set("n", "<leader>hs", ":vertical resize -10<CR>", { desc = "Decrease vertical size for buffer" })
