@@ -46,6 +46,10 @@ return {
             lspconfig.ts_ls.setup(common_object)
             lspconfig.lua_ls.setup(common_object)
             lspconfig.clangd.setup(common_object)
+            -- lspconfig.omnisharp.setup({
+            --     cmd = { "dotnet", "~/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+            --     root_dir = require('lspconfig.util').root_pattern(".git", "*.sln"),
+            -- })
             lspconfig.csharp_ls.setup(
                 {
                     cmd = { 'csharp-ls' },
