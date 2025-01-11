@@ -4,6 +4,19 @@ return {
     config = function()
         local lualine = require("lualine")
         local lazy_status = require("lazy.status")
+        local get_clients_lsp = function()
+            local clients = vim.lsp.get_clients()
+            if next(clients) == nil then
+                return ''
+            end
+            local c = {}
+            for _, client in pairs(clients) do
+                table.insert(c, client.name)
+            end
+            return table.concat(c, '|')
+        end
+        print(get_clients_lsp())
+
 
         local colors = {
             blue = "#65D1FF",
@@ -63,6 +76,7 @@ return {
                     { "encoding" },
                     { "fileformat" },
                     { "filetype" },
+                    { get_clients_lsp }
                 },
                 lualine_a = {
                     {
